@@ -1,0 +1,429 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.body{
+    background-color: #30343f;
+} 
+.segments{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+.first-segment{
+    width:100%;
+    z-index: 1;
+}
+.second-segment{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    z-index: 2;
+    background-color: #30343f;
+}
+.header{
+    background-color: #181e2a;
+    color: #fff;
+}
+.main-title{
+    padding: 10px;
+    font-size: 35px;
+}
+.header-title-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.header-buttons-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.header-buttons-list{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+.header-buttons-list li{
+    margin: 2% 3% 2%;
+    flex-direction: row;
+}
+.header-buttons-list button{
+    border: none;
+    background-color: #181e2a;
+    color: #fff;
+}
+/*icons*/
+.image-icon::before{
+    content: '\f1c5';
+    font: var(--fa-font-solid);
+}
+.text-icon::before{
+    content: '\f031';
+    font: var(--fa-font-solid);
+}
+.light-icon::before{
+    content: '\f0eb';
+    font: var(--fa-font-solid);
+}
+.download-icon::before{
+    content: '\f019';
+    font: var(--fa-font-solid);
+}
+/*main*/
+main{
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+   }
+.main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    max-width: 260px;
+    max-height: 260px;
+    position: relative;
+}
+.main-image{
+    display: flex;
+    background-size: cover;
+    background-color: #000;
+    flex-grow: 1;
+}
+.frame{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    position: static;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+} 
+.frame-checkbox{
+    display: none;
+}
+.top-position-frame{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+}
+.bottom-position-frame{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+}
+.download-button button{
+    background-color: #2f7d32;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 80px;
+}
+/*-----------------------------*/
+/*aside imagen*/
+.mode-edition{
+    z-index: 10;
+    float: right;
+    width: 220px;
+    height: 100%;
+    background-color: #252935;
+    color: #fff;
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    font-size: 10px;
+}
+.display-visibility-image{
+    display: flex;
+}
+.aside-items{
+    display: flex;
+    flex-direction: column;
+}
+.aside-title{
+    display: flex;
+    justify-content: center;
+    padding: 7%;
+}
+.aside-items h3{
+    padding: 5% 0;
+}
+input,
+button,
+select{
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    outline: 0;
+}
+.url-field,
+.text-field{
+    padding: 7px 17px;
+    margin-bottom: 10px;
+    background-color: #3a3e49;
+    border: none;
+    border-radius: 3px;
+}
+.control-panel-columns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: -5px;
+}
+.panel-color,
+.panel-select{
+    padding: 0 1%;
+    margin:1%;
+}
+.panel-color{
+    width: calc(50% - 5px);
+}
+#fondo-color{
+    height: 20px;
+    width: 100%;
+}
+.panel-select{
+    width: calc(50% - 5px);
+}
+.select-mode,
+.select-font-family,
+.padding-text-value,
+.left-align-text,
+.center-align-text,
+.right-align-text,
+.text-size-input,
+.none-contour-text,
+.ligth-contour-text,
+.dark-contour-text,
+.select-line-height{
+    height: 36px;
+    background-color: #3a3e49;
+    align-items: center;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+.panel-control-filters input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+input[type="range"]{
+    width: 100%;
+    background-color: #5a5d68;
+    border-radius: 10px;
+    appearance: none;
+    height: 5px;
+    margin-top: 10px;
+}
+.button-reset{
+   background-color: #3a3e49;
+   border-radius: 3px;
+   height: 30px;
+   margin-top: 20px;
+   padding: 0 10px;
+}
+/*----------------------------*/
+@media (min-width: 1200px) {
+    .main-container{
+        max-width: 700px;
+        max-height: 700px;
+    }
+    .mode-edition{
+        visibility: visible;
+        display: flex;
+    }  
+    .download-button button{
+        color: #fff;
+        margin: -30px 0 53px;
+    }
+}
+@media (min-width: 500px) {
+    .main-container{
+        max-width: 500px;
+        max-height: 500px;
+    }
+    .frame{
+        font-size: 40px;
+        padding: 10px 0;
+    }
+    .download-button button{
+        margin-top: 40px;
+    }
+}
+/*-----------------*/
+/*aside text*/
+.text-edition{
+    z-index: 11;
+    float: right;
+    width: 100%;
+    height: 100%;
+    background-color: #252935;
+    color: #fff;
+    display: none;
+    visibility: visible;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    font-size: 10px;
+}
+.display-visibility-text{
+    display: flex;
+}
+.aside-items-text{
+    width: 100%;
+}
+.aside-items-text .aside-title{
+    padding: 3%;
+}
+.aside-items-text input:not(input[type="checkbox"]){
+    width: 100%;
+}
+.text-edition h3{
+    padding: 2% 0 2%;
+}
+#select-font-family{
+    width: 100%;
+}
+.font-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+.text-size-input{
+    width: 50%; 
+    padding-left: 5px;
+}
+.button-text-alignment{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 1%;
+}
+.button-alignment{
+    width: calc(100% / 3 - 10px / 3);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-right: 8px;
+}
+.background-color-section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+}
+.color-picker,
+.background-color-picker{
+    width: 50%;
+}
+#background-text-color,
+#color-text-color{
+    width: 98%;
+    height: 25px;
+    margin: 2px 0;
+}
+.button-contour{
+    padding-right: 8px;
+}
+#select-line-height,
+#padding-text-value{
+    width: 100%;
+}
+@media (min-width: 700px) {
+    .text-edition{
+        z-index: 15;
+        width: 220px;
+        visibility: visible;
+    }
+    .text-edition h3{
+        padding: 10% 0 5%;
+    }
+    .color-picker,
+    .background-color-picker{
+        width: 50%;
+    }
+    .button-text-contour{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .button-contour{
+        width: calc(100% / 3 - 10px / 3);
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding-right: 8px;
+    }
+}
+/*--------modo claro------------*/
+.second-segment-light,
+.body-light{
+    background-color: #eeeeee;
+} 
+.background-light{
+    background-color: #e0e0e0;
+    color: #424242;
+}
+.header-buttons-list-light button{
+    background-color: #e0e0e0;
+    color: #424242;
+}
+.aside-light{
+    background-color: #fafafa;
+    color: #424242;
+}
+#url-field-light,
+#text-field-light,
+.fields-color{  
+    background-color: #e0e0e0;
+}
+.select-mode-light,
+.select-font-family-light,
+.padding-text-value-light,
+#left-align-text-light,
+#center-align-text-light,
+#right-align-text-light,
+#text-size-input-light,
+#none-contour-text-light,
+#ligth-contour-text-light,
+#dark-contour-text-light,
+#select-line-height-light{
+    background-color: #e0e0e0;
+    color: #424242;
+}
+.button-reset-light{
+    background-color: #3a3e49;
+ }
+.text-edition-light{
+    background-color: #fafafa;
+    color: #3a3e49;
+}
