@@ -30,7 +30,7 @@ Los requisitos mínimos para que el proyecto sea considerado para la entrega son
 
 ### Enlace: :metal:
 Dale click al siguiente enlace para acceder 
-[Generador-de-memes](https://im-majo-jojo.github.io/generador_de_memes/ "Generador-de-memes")
+[Generador-de-memes](https://im-majo-jojo.github.io/GeneradorDeMemes-19/ "Generador-de-memes")
  
 
 ### Herramientas usadas: :toolbox:
