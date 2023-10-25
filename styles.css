@@ -111,11 +111,23 @@ main{
     display: flex;
     justify-content: center;
     padding: 5px 0;
+
+
+    
 } 
-.frame-checkbox{
-    display: none;
+.frame-checkbox-bottom{
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-overflow: clip;
 }
-.top-position-frame{
+.frame-checkbox-top{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+/* .top-position-frame{
     position: absolute;
     bottom: 0;
     top: 0;
@@ -129,7 +141,7 @@ main{
     right: 0;
     left: 0;
     background-color: transparent;
-}
+} */
 .download-button button{
     background-color: #2f7d32;
     color: #fff;

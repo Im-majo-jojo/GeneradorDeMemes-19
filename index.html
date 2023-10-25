@@ -52,9 +52,10 @@
                         </button>
                     </li>
                     <li>
-                        <button class="light-icon" onclick="toggleTittle()">
+                        <button class="light-icon" >
                             Modo oscuro
                         </button>
+                        <!-- onclick="toggleTittle()" -->
                     </li>
                 </ul>
             </article>
@@ -63,11 +64,11 @@
     <div class="second-segment">
         <main>
             <div class="main-container" id="meme-container" style="height: 500px;">
-                    <p id="top-frame-changes" class="top-text frame">
+                    <p id="top-frame-changes" class="top-text frame frame-checkbox-top">
                         TOP TEXT
                     </p>
                     <div class="main-image"></div>
-                    <p id="bottom-frame-changes" class="bottom-text frame">
+                    <p id="bottom-frame-changes" class="bottom-text frame frame-checkbox-bottom">
                        BOTTOM TEXT
                     </p>
             </div>
@@ -165,7 +166,7 @@
                 </div>
                 <div class="padding-text">
                     <h3>ESPACIADO</h3>
-                    <input type="number" aria-label="espaciado de texto" id="padding-text-value" class="padding-text-value" min="10" max="50" value="35">
+                    <input type="number" aria-label="espaciado de texto" id="padding-text-value" class="padding-text-value" min="10" max="50" value="10">
                 </div>
                 <div class="line-height">
                     <h3>INTERLINEADO</h3>
