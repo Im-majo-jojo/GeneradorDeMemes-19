@@ -1,50 +1,48 @@
-//VARIABLES
+//VARIABLES------------------------------------------
 
-//------------------------------------------
-// FUNCIONES
-const variable = (selector) => document.querySelector(selector)
+// FUNCIONES------------------------------------------
+    //GENERAL
+    const variable = (selector) => document.querySelector(selector)
 
-// MODO CLARO 
-const lightMode = () => {
-    variable(".second-segment").classList.toggle("second-segment-light")
-    variable(".header").classList.toggle("background-light")
-    variable(".header-buttons-list").classList.toggle("header-buttons-list-light")
-    variable(".body").classList.toggle("body-light")
-    variable(".text-edition").classList.toggle("aside-light")
-    variable(".mode-edition").classList.toggle("aside-light")
-    variable(".url-field").classList.toggle("background-light")
-    variable(".text-field-top").classList.toggle("background-light")
-    variable(".text-field-bottom").classList.toggle("background-light")
-    variable(".select-mode").classList.toggle("background-light")
-    variable(".select-font-family").classList.toggle("background-light")
-    variable(".padding-text-value").classList.toggle("background-light")
-    variable(".left-align-text").classList.toggle("background-light")
-    variable(".center-align-text").classList.toggle("background-light")
-    variable(".right-align-text").classList.toggle("background-light")
-    variable(".text-size-input").classList.toggle("background-light")
-    variable(".none-contour-text").classList.toggle("background-light")
-    variable(".ligth-contour-text").classList.toggle("background-light")
-    variable(".dark-contour-text").classList.toggle("background-light")
-    variable(".select-line-height").classList.toggle("background-light")  
-}
-
-//FILTROS 
-const todosLosFiltros =  () => {
-    variable(".main-image").style.filter =  `brightness(${variable("#brillo-range").value}) opacity(${variable("#opacidad-range").value}) blur(${variable("#desenfoque-range").value}px) contrast(${variable("#contraste-range").value}%) grayscale(${variable("#escala-de-grises-range").value}%) hue-rotate(${variable("#hue-range").value}deg) sepia(${variable("#sepia-range").value}%) saturate(${variable("#saturado-range").value}%) invert(${variable("#negativo-range").value})`
-}
-
-//DOWNLOAD BUTTON
-const downloadMeme = () => {
-    domtoimage.toBlob(variable("#meme-container")).then(function (blob) {
-    window.saveAs(blob, "mi-meme.png")
-    })
+    // MODO CLARO 
+    const lightMode = () => {
+        variable(".second-segment").classList.toggle("second-segment-light")
+        variable(".header").classList.toggle("background-light")
+        variable(".header-buttons-list").classList.toggle("header-buttons-list-light")
+        variable(".body").classList.toggle("body-light")
+        variable(".text-edition").classList.toggle("aside-light")
+        variable(".mode-edition").classList.toggle("aside-light")
+        variable(".url-field").classList.toggle("background-light")
+        variable(".text-field-top").classList.toggle("background-light")
+        variable(".text-field-bottom").classList.toggle("background-light")
+        variable(".select-mode").classList.toggle("background-light")
+        variable(".select-font-family").classList.toggle("background-light")
+        variable(".padding-text-value").classList.toggle("background-light")
+        variable(".left-align-text").classList.toggle("background-light")
+        variable(".center-align-text").classList.toggle("background-light")
+        variable(".right-align-text").classList.toggle("background-light")
+        variable(".text-size-input").classList.toggle("background-light")
+        variable(".none-contour-text").classList.toggle("background-light")
+        variable(".ligth-contour-text").classList.toggle("background-light")
+        variable(".dark-contour-text").classList.toggle("background-light")
+        variable(".select-line-height").classList.toggle("background-light")  
     }
 
-//-------------------------------------------------
-// EVENTOS
+    //FILTROS 
+    const todosLosFiltros =  () => {
+        variable(".main-image").style.filter =  `brightness(${variable("#brillo-range").value}) opacity(${variable("#opacidad-range").value}) blur(${variable("#desenfoque-range").value}px) contrast(${variable("#contraste-range").value}%) grayscale(${variable("#escala-de-grises-range").value}%) hue-rotate(${variable("#hue-range").value}deg) sepia(${variable("#sepia-range").value}%) saturate(${variable("#saturado-range").value}%) invert(${variable("#negativo-range").value})`
+    }
+
+    //DOWNLOAD BUTTON
+    const downloadMeme = () => {
+        domtoimage.toBlob(variable("#meme-container")).then(function (blob) {
+        window.saveAs(blob, "mi-meme.png")
+        })
+    }
+
+// EVENTOS-------------------------------------------------
 
 const initializeProject = () => {
-
         // URL CHANGE
         variable("#url-field").addEventListener ( "input", (e) => {
             variable(".main-image").style.backgroundImage =  `url(${e.target.value})`
@@ -212,5 +210,6 @@ const initializeProject = () => {
         variable("#select-mode").addEventListener("change", (e) => {
             variable(".main-image").style.backgroundBlendMode = e.target.value
         })
-
 }
+
+window.addEventListener("load", initializeProject)
