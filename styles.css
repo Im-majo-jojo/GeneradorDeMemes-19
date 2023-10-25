@@ -127,21 +127,6 @@ main{
     right: 0;
     left: 0;
 }
-/* .top-position-frame{
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: transparent;
-}
-.bottom-position-frame{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: transparent;
-} */
 .download-button button{
     background-color: #2f7d32;
     color: #fff;
